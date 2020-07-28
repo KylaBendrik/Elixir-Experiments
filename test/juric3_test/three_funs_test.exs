@@ -18,4 +18,9 @@ defmodule Juric3.ThreeFunsTest do
     to = 1
     assert Juric3.ThreeFuns.range(from, to) == [1]
   end
+  
+  test "positive returns a filtered list containing the positive numbers from the input list" do
+    input = Juric3.ThreeFuns.range(-3, 3)
+    assert Juric3.ThreeFuns.positive(input) == [0, 1, 2, 3]
+  end
 end
